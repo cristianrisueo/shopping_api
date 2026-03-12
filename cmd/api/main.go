@@ -31,10 +31,6 @@ func main() {
 		log.Fatal().Err(err).Msg("Failed to get database connection")
 	}
 
-	if err = sqlDB.Ping(); err != nil {
-		log.Fatal().Err(err).Msg("Failed to ping database")
-	}
-
 	defer sqlDB.Close()
 	log.Info().Msg("Database connection established successfully")
 
