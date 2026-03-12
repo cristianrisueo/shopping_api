@@ -2,10 +2,10 @@ include .env
 export
 
 build:
-	go build -o bin/api cmd/api
+	go build -o bin/api cmd/api/main.go
 
 run:
-	go run cmd/api
+	go run cmd/api/main.go
 
 lint:
 	golangci-lint run
